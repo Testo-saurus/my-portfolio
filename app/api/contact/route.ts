@@ -3,9 +3,12 @@ import { EmailTemplate } from "../../../components/email-template";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(Request) {
+import type { NextRequest } from "next/server";
+
+export async function POST(request: NextRequest) {
+  // ← Change 'Request' to 'request'
   try {
-    const requestData = await Request.json();
+    const requestData = await request.json(); // ← Change 'Request' to 'request'
     const { name, email, message } = requestData;
 
     const { data, error } = await resend.emails.send({
