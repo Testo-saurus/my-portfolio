@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import AnimatedCollapse from "./AnimatedCollapse";
 import ProjectDetails from "./ProjectDetails";
@@ -35,7 +36,7 @@ export default function Work() {
       description:
         'German Landlords can via PDF upload create a simple "Nebenkostenabrechnung" for their tenants.',
       icon: "📦",
-      image: "/project-2.jpg",
+      image: "/Screenshot_Circle_Game.png",
       techStack: ["Next.js", "Python", "PDF-lib", "Stripe"],
       year: 2023,
       duration: "6 months",
@@ -242,12 +243,22 @@ export default function Work() {
 
                 {/* Project Image/Preview - Smaller for regular projects */}
                 <div className="h-48 bg-gray-100 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-16 bg-white rounded-lg shadow-lg mb-2 mx-auto"></div>
-                      <p className="text-xs text-gray-500">Preview</p>
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      fill
+                      className="object-cover object-center object-top"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-24 h-16 bg-white rounded-lg shadow-lg mb-2 mx-auto"></div>
+                        <p className="text-xs text-gray-500">Preview</p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             ))}
