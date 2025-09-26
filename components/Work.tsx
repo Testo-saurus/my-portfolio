@@ -102,8 +102,8 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="work" className="py-16 md:py-20 scroll-mt-20 sm:scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 className="text-4xl font-bold mb-2">Portfolio</h2>

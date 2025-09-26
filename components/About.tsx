@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="about" className="py-12 md:py-20 scroll-mt-20 sm:scroll-mt-24">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {" "}
           {/* Changed to items-start */}
@@ -20,8 +22,8 @@ export default function About() {
             </p>
 
             {/* Move anchor inside text container with responsive positioning */}
-            <a
-              href="#"
+            <Link
+              href="/about"
               className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2 group mb-8 lg:mb-0"
             >
               More about me
@@ -38,7 +40,7 @@ export default function About() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </a>
+            </Link>
 
             <div className="grid grid-cols-2 gap-6 lg:hidden">
               {" "}

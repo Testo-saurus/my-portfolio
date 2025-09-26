@@ -5,9 +5,10 @@ import Work from "../components/Work";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       {/* Main content takes available space */}
-      <main className="flex-1 flex flex-col items-center justify-center p-8 sm:p-20">
+      <main className="flex-1 flex flex-col items-stretch pt-16 sm:pt-20">
+        {/* Sections handle their own horizontal padding */}
         <Hero />
         <About />
         <Work />
@@ -28,7 +29,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          Imprint
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -43,7 +44,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          Imprint
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -58,7 +59,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          LinkedIn
         </a>
       </footer>
     </div>
