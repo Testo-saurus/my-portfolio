@@ -100,20 +100,19 @@ export default function AboutPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
             Mental Models I Follow
           </h2>
-          <p className="text-center text-gray-500 mb-8">
+          <p className="text-center text-gray-300 mb-8">
             I mostly follow these thinking patterns, but of course, they
             don&apos;t always work.
           </p>
-          <div className="grid gap-6 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-wrap gap-6">
             {mentalModels.map((model) => (
               <button
                 key={model.name}
-                className={`bg-white rounded-lg shadow-md p-4 transition-all duration-300 text-left ${
-                  openModel === model.name ? "col-span-2" : ""
-                } hover:shadow-lg focus:outline-none`}
+                className={`bg-white rounded-lg shadow-md p-4 transition-all duration-100 ease-out text-left hover:shadow-lg focus:outline-none ${
+                  openModel === model.name ? "z-10 relative" : ""
+                }`}
                 style={{
-                  transform:
-                    openModel === model.name ? "scale(1.02)" : "scale(1)",
+                  width: openModel === model.name ? "100%" : "calc(50% - 12px)", // Smooth width change
                 }}
                 onClick={() =>
                   setOpenModel(openModel === model.name ? null : model.name)
@@ -127,9 +126,9 @@ export default function AboutPage() {
                   {openModel === model.name ? (
                     <>
                       <span className="block mb-2">{model.description}</span>
-                      <button className="text-sm text-blue-500 focus:outline-none mt-2">
+                      <span className="text-sm text-blue-500 mt-2">
                         ... less
-                      </button>
+                      </span>
                     </>
                   ) : (
                     <>
