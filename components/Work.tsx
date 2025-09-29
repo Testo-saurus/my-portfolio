@@ -10,85 +10,93 @@ export default function Work() {
   const projects = [
     {
       id: 1,
-      company: "Techplus X",
-      title: "UI Product Explorations",
+      company: "Mico Saas",
+      title: "Nebenkosten Navigator",
       description:
-        "Lorem ipsum dolor sit amet, consectetur asul moler adipiscing elit eu gravida etiam.",
-      icon: "📊",
-      image: "/project-1.jpg",
-      // Add expanded content:
-      techStack: ["React", "TypeScript", "Tailwind", "Figma"],
-      year: 2024,
-      duration: "3 months",
-      aiPercentage: 25,
+        'German Landlords can via PDF upload create a simple "Nebenkostenabrechnung" for their tenants.',
+      icon: "📦",
+      image: "/NebenkostenNav_ScreenShot.png",
+      techStack: ["Next.js", "Python", "PDF-lib", "Stripe"],
+      year: 2023,
+      duration: "6 months",
+      aiPercentage: 40,
       whyBuilt:
-        "To explore modern UI patterns and improve user experience across our product suite.",
+        "To simplify the complex process of creating utility cost statements for German landlords.",
       howBuilt:
-        "Used React with TypeScript for type safety, Tailwind for consistent styling, and Figma for prototyping.",
-      otherInfo: "This project helped establish our design system foundation.",
-      githubLink: "https://github.com/yourusername/project1",
-      websiteLink: "https://project1.example.com",
+        "Built with Next.js frontend, Python backend for PDF processing, and Stripe for payments.",
+      otherInfo: "Processed over 1,000 documents in the first month.",
+      githubLink: "https://github.com/yourusername/nebenkosten",
+      websiteLink: "https://nebenkosten-navigator.com",
     },
     {
       id: 2,
-      company: "Mico Saas",
-      title: "Nebenkosten Navigator",
+      company: "Personal Project", // Changed from "Game" to be more descriptive
+      title: "Circle Conquest: Political Edition - Territory Game",
       description:
-        'German Landlords can via PDF upload create a simple "Nebenkostenabrechnung" for their tenants.',
-      icon: "📦",
+        "A real-time, strategy game where players control political circles to expand territory across a USA-shaped map. ",
+      icon: "🇺🇸", // Updated icon to reflect political theme
       image: "/Screenshot_Circle_Game.png",
-      techStack: ["Next.js", "Python", "PDF-lib", "Stripe"],
-      year: 2023,
-      duration: "6 months",
-      aiPercentage: 40,
+      techStack: [
+        "React",
+        "Tailwind CSS",
+        "Base44",
+        "Pusher.js",
+        "Deno (Backend Functions)",
+      ], // Added more specific tech
+      year: 2025, // Updated year to current year of completion
+      duration: "1 Week", // "2 Days" is too short for a multiplayer game
+      aiPercentage: 95,
       whyBuilt:
-        "To simplify the complex process of creating utility cost statements for German landlords.",
+        "Inspired by popular territory-expansion games like Paper.io 2, the goal was to build a dynamic and engaging multiplayer experience from scratch. This project also served as a deep dive into real-time web technologies and complex game logic within a modern development platform.",
       howBuilt:
-        "Built with Next.js frontend, Python backend for PDF processing, and Stripe for payments.",
-      otherInfo: "Processed over 1,000 documents in the first month.",
-      githubLink: "https://github.com/yourusername/nebenkosten",
-      websiteLink: "https://nebenkosten-navigator.com",
+        "Used the Base44 platform: The iterative development process leveraged AI assistance for initial scaffolding and complex feature implementation (e.g., real-time communication, game state management), allowing rapid prototyping and deployment.",
+      otherInfo:
+        "Never successfully implemented robust real-time multiplayer functionality.  Significant Problems with state synchronization, player authentication, and efficient backend communication using Pusher.js and custom Deno backend functions.", // Emphasize overcoming MP challenges
+      githubLink: "https://github.com/yourusername/nebenkosten", // Please update this to the actual game's repo if available
+      websiteLink:
+        "https://circle-conquest-political-edition-4a71582e.base44.app/",
     },
     {
       id: 3,
-      company: "Techplus X",
-      title: "UI Product Explorations",
+      company: "Personal Project",
+      title: "Pomodoro Timer",
       description:
-        "Lorem ipsum dolor sit amet, consectetur asul moler adipiscing elit eu gravida etiam.",
-      icon: "📊",
-      image: "/project-1.jpg",
-      // Add expanded content:
-      techStack: ["React", "TypeScript", "Tailwind", "Figma"],
+        "A simple timer app to help with focused work sessions and regular breaks. Built in pure JavaScript as my first ever coding project.",
+      icon: "⏲️",
+      image: "/PomodoreTimer.png",
+      techStack: ["HTML", "CSS", "JavaScript"],
       year: 2024,
-      duration: "3 months",
-      aiPercentage: 25,
+      duration: "3 week",
+      aiPercentage: 0,
       whyBuilt:
-        "To explore modern UI patterns and improve user experience across our product suite.",
+        "I wanted to learn the basics of web development and create something useful for my own productivity. ",
       howBuilt:
-        "Used React with TypeScript for type safety, Tailwind for consistent styling, and Figma for prototyping.",
-      otherInfo: "This project helped establish our design system foundation.",
-      githubLink: "https://github.com/yourusername/project1",
-      websiteLink: "https://project1.example.com",
+        "Hand-coded in vanilla JavaScript, with basic HTML and CSS for layout and styling. No frameworks, just learning by doing.",
+      otherInfo:
+        "This project taught me a lot about DOM manipulation and event handling.",
+      githubLink: "https://github.com/yourusername/pomodoro-timer",
+      websiteLink: "https://yourdomain.com/pomodoro-timer",
     },
     {
       id: 4,
-      company: "Mico Saas",
-      title: "Nebenkosten Navigator",
+      company: "Chrome Extension",
+      title: "Focus Extension",
       description:
-        'German Landlords can via PDF upload create a simple "Nebenkostenabrechnung" for their tenants.',
-      icon: "📦",
-      image: "/project-2.jpg",
-      techStack: ["Next.js", "Python", "PDF-lib", "Stripe"],
-      year: 2023,
-      duration: "6 months",
-      aiPercentage: 40,
+        "A browser extension that uses AI to scan the DOM and give users feedback on whether they're staying productive online.",
+      icon: "🎯",
+      image: "/focusEx.png",
+      techStack: ["JavaScript", "Chrome Extension APIs", "AI Model"],
+      year: 2025,
+      duration: "2 weeks",
+      aiPercentage: 70,
       whyBuilt:
-        "To simplify the complex process of creating utility cost statements for German landlords.",
+        "I wanted a simple tool that could nudge me (and others) when we drift off-task, using AI to analyze what’s actually happening in the browser.",
       howBuilt:
-        "Built with Next.js frontend, Python backend for PDF processing, and Stripe for payments.",
-      otherInfo: "Processed over 1,000 documents in the first month.",
-      githubLink: "https://github.com/yourusername/nebenkosten",
-      websiteLink: "https://nebenkosten-navigator.com",
+        "Built as a Chrome extension in JavaScript, with an AI model that inspects page content and context. The extension provides real-time feedback and gentle reminders to help users refocus.",
+      otherInfo:
+        "Learned a lot about browser APIs, content scripts, and integrating AI into client-side tools.",
+      githubLink: "https://github.com/yourusername/focus-extension",
+      websiteLink: "https://yourdomain.com/focus-extension",
     },
   ];
 
@@ -177,18 +185,15 @@ export default function Work() {
               </div>
 
               {/* Project Image/Preview */}
-              <div className="h-64 bg-gray-100 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-20 bg-white rounded-lg shadow-lg mb-4 mx-auto"></div>
-                    <iframe
-                      style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-                      width="1200"
-                      height="550"
-                      src="https://nebenkosten-navigator-04626349.base44.app"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
+              <div className="h-50 md:h-150 bg-gray-100 relative overflow-hidden">
+                <div>
+                  <Image
+                    src={projects[0].image}
+                    alt={`${projects[0].title} preview`}
+                    fill
+                    className="rounded-lg object-cover object-top shadow"
+                    sizes="100vw"
+                  />
                 </div>
               </div>
             </div>

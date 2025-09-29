@@ -12,22 +12,22 @@ export default function AboutPage() {
     {
       name: "Human-centered design",
       description:
-        "A design framework that develops solutions by involving the human perspective in all steps of the problem-solving process.",
+        "I try to start with what real people actually need, not just what sounds good in a meeting. If users struggle, it’s a sign to rethink things. Testing with humans early usually saves headaches later.",
     },
     {
       name: "Jobs-to-be-Done (JTBD) Theory",
       description:
-        "A framework for understanding customer needs and designing products to fulfill those needs.",
+        "People use products to solve problems, not just for features. I find it helps to ask what job someone’s really trying to get done, and focus on that. Sometimes the answer isn’t what you expect.",
     },
     {
       name: "Move Fast and Break Things",
       description:
-        "A mantra for embracing experimentation and learning from failure.",
+        "Shipping quickly and learning from what doesn’t work has taught me more than waiting for perfect. I’d rather get feedback early and adjust than polish forever. Mistakes are part of the process. Also, I don't wait for permission—except when users might be negatively affected.",
     },
     {
       name: "Go out and talk with users",
       description:
-        "The best way to understand user needs is to engage with them directly.",
+        "Whenever I’m stuck (or building something new), talking to users usually helps. Real conversations beat dashboards and surveys. It’s not always comfortable, but it’s almost always useful.",
     },
   ];
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
               <div>
                 <h1 className="text-2xl md:text-4xl font-bold mb-4">
-                  Happy to tell you more about me:
+                  Happy to tell you more:
                 </h1>
                 <p className="text-gray-700 mb-4 text-sm md:text-base">
                   I&apos;m a Product Manager focused on outcome-driven UX,
@@ -97,18 +97,23 @@ export default function AboutPage() {
 
       <section className="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
-            Mental Models I Follow
-          </h2>
-          <p className="text-center text-gray-300 mb-8">
-            I mostly follow these thinking patterns, but of course, they
-            don&apos;t always work.
+          <div className="flex items-center justify-center mb-2 gap-3">
+            <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-lg">
+              🧠
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Mental Models I Like
+            </h2>
+          </div>
+          <p className="text-center text-gray-500 mb-8">
+            Some patterns I aim for when making stuff. Sometimes I nail them,
+            sometimes not so much.
           </p>
           <div className="flex flex-wrap gap-6">
             {mentalModels.map((model) => (
               <button
                 key={model.name}
-                className={`bg-white rounded-lg shadow-md p-4 transition-all duration-100 ease-out text-left hover:shadow-lg focus:outline-none ${
+                className={`bg-white rounded-lg shadow-md p-4 text-left hover:shadow-lg focus:outline-none ${
                   openModel === model.name ? "z-10 relative" : ""
                 }`}
                 style={{
@@ -145,9 +150,12 @@ export default function AboutPage() {
 
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
-            Stuff that I like
-          </h2>
+          <div className="flex items-center justify-center mb-2 gap-3">
+            <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-lg">
+              ⭐
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold">Content I like</h2>
+          </div>
           <p className="text-center text-gray-500 mb-8">
             This keeps me inspired and curious.
           </p>

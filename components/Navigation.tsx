@@ -14,7 +14,7 @@ export default function Navigation() {
           <span role="img" aria-label="waving hand">
             👋
           </span>{" "}
-          Welcome to my page!
+          Welcome!
         </Link>
         <div className="flex items-center gap-6 sm:gap-8">
           <Link href="/#about" className="hover:underline">

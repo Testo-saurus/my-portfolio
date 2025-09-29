@@ -18,7 +18,7 @@ export default function Home() {
       <footer className="flex gap-6 flex-wrap items-center justify-center p-8 border-t border-gray-200">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="/imprint"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -31,24 +31,10 @@ export default function Home() {
           />
           Imprint
         </a>
+
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Imprint
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://www.linkedin.com/in/jannik-strohbeck-044707130"
           target="_blank"
           rel="noopener noreferrer"
         >

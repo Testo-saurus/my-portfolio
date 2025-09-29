@@ -83,21 +83,21 @@ export default function About() {
                   {/* Your existing timeline code */}
                   {[
                     {
-                      title: "VP of Design",
-                      company: "Company, LLC.",
-                      period: "Jan 2022 - Present",
+                      title: "Sr. Product Manager",
+                      company: "Protofy (digital agency)",
+                      period: "since 2025",
                       current: true,
                     },
                     {
-                      title: "Senior Product Designer",
-                      company: "Agency, Inc.",
-                      period: "2018 - 2022",
+                      title: "Product Manager",
+                      company: "CHECK24 (private health insurance comparison)",
+                      period: "2023 – 2025",
                       current: false,
                     },
                     {
-                      title: "UX Researcher",
-                      company: "Business, Inc.",
-                      period: "2015 - 2018",
+                      title: "Founder | Product Person",
+                      company: "myActiveLab (digital health app),",
+                      period: "2021 – 2023",
                       current: false,
                     },
                   ].map((experience) => (
