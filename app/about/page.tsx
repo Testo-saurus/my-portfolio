@@ -65,7 +65,7 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {[
-                    "📍 Berlin",
+                    "📍 Hamburg",
                     "🧭 B2B & B2C",
                     "🗣️ EN/DE",
                     "✨ Open to collab",
@@ -81,7 +81,7 @@ export default function AboutPage() {
 
                 <div>
                   <Link
-                    href="/Jannik_Stroh_CV.pdf"
+                    href="/CV Jannik Strohbeck 2025.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-5 py-3 border rounded-lg hover:bg-gray-50"
