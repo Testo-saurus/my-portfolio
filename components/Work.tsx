@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import AnimatedCollapse from "./AnimatedCollapse";
 import ProjectDetails from "./ProjectDetails";
@@ -112,18 +113,23 @@ export default function Work() {
   return (
     <section id="work" className="py-16 md:py-20 scroll-mt-20 sm:scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-end mb-12">
+        <div className="flex-colum items-end mb-12">
           <div>
-            <h2 className="text-4xl font-bold mb-2">Portfolio</h2>
-            <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing.
+            <h2 className="text-4xl font-bold mb-2">Projects & Products </h2>
+            <p className="text-gray-600 mb-8">
+              In 2025, I quit my job at CHECK24 and took six months off to learn
+              programming. Why? Because I genuinely love building products. I
+              realized that with a bit of coding knowledge, I can leverage AI to
+              create things entirely on my own—and I think that&apos;s pretty
+              exciting - so I went all in.
             </p>
           </div>
-          <a
-            href="#"
+
+          <Link
+            href="/projects"
             className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2 group mb-8 lg:mb-0"
           >
-            All projects
+            All Projects{" "}
             <svg
               className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -137,7 +143,7 @@ export default function Work() {
                 d="M9 5l7 7-7 7"
               />
             </svg>
-          </a>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -204,7 +210,7 @@ export default function Work() {
             {projects.slice(1).map((project) => (
               <div
                 key={project.id}
-                className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -247,14 +253,14 @@ export default function Work() {
                 </div>
 
                 {/* Project Image/Preview - Smaller for regular projects */}
-                <div className="h-48 bg-gray-100 relative overflow-hidden">
+                <div className="aspect-video bg-gray-100 relative overflow-hidden flex-1 flex items-end">
                   {project.image ? (
                     <Image
                       src={project.image}
                       alt={`${project.title} preview`}
                       fill
-                      className="object-cover object-center object-top"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className=" object-cover object-center object-bottom "
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 590vw, 33vw"
                     />
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">

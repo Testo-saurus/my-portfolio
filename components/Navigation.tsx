@@ -21,7 +21,7 @@ export default function Navigation() {
             About
           </Link>
           <Link href="/#work" className="hover:underline">
-            Work
+            Projects
           </Link>
 
           <button onClick={openContact} className="hover:underline">
