@@ -2,6 +2,7 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import { createContext, useContext, useState } from "react";
+import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import Navigation from "../components/Navigation";
 import "./globals.css";
@@ -51,6 +52,7 @@ export default function RootLayout({
         >
           <Navigation />
           {children}
+          <Footer />
           {/* Modal rendered at root level - not inside Navigation */}
           <Modal isOpen={isContactOpen} onClose={closeContact} />
         </ModalContext.Provider>

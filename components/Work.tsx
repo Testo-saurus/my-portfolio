@@ -10,6 +10,27 @@ export default function Work() {
 
   const projects = [
     {
+      id: 3,
+      company: "Personal Project",
+      title: "Pomodoro Timer",
+      description:
+        "A simple timer app to help with focused work sessions and regular breaks. Built in pure JavaScript as my first ever coding project.",
+      icon: "⏲️",
+      image: "/PomodoreTimer.png",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      year: 2024,
+      duration: "3 week",
+      aiPercentage: 50,
+      whyBuilt:
+        "I wanted to learn the basics of web development and create something useful for my own productivity. ",
+      howBuilt:
+        "Hand-coded the frist version then fine tuned using copilot in vs code.",
+      otherInfo:
+        "This project taught me a lot about DOM manipulation and event handling. I use this myself almost every day.",
+      githubLink: "https://github.com/Testo-saurus/POMODORE-LOFI-APP",
+      websiteLink: "https://testo-saurus.github.io/POMODORE-LOFI-APP/",
+    },
+    {
       id: 1,
       company: "Mico Saas",
       title: "Nebenkosten Navigator",
@@ -60,27 +81,6 @@ export default function Work() {
         "https://circle-conquest-political-edition-4a71582e.base44.app/",
     },
     {
-      id: 3,
-      company: "Personal Project",
-      title: "Pomodoro Timer",
-      description:
-        "A simple timer app to help with focused work sessions and regular breaks. Built in pure JavaScript as my first ever coding project.",
-      icon: "⏲️",
-      image: "/PomodoreTimer.png",
-      techStack: ["HTML", "CSS", "JavaScript"],
-      year: 2024,
-      duration: "3 week",
-      aiPercentage: 50,
-      whyBuilt:
-        "I wanted to learn the basics of web development and create something useful for my own productivity. ",
-      howBuilt:
-        "Hand-coded the frist version then fine tuned using copilot in vs code.",
-      otherInfo:
-        "This project taught me a lot about DOM manipulation and event handling. I use this myself almost every day.",
-      githubLink: "https://github.com/Testo-saurus/POMODORE-LOFI-APP",
-      websiteLink: "https://testo-saurus.github.io/POMODORE-LOFI-APP/",
-    },
-    {
       id: 4,
       company: "Chrome Extension",
       title: "Focus Extension",
@@ -129,7 +129,7 @@ export default function Work() {
 
           <Link
             href="/projects"
-            className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2 group mb-8 lg:mb-0"
+            className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-2 group mb-8 lg:mb-0 cursor-pointer"
           >
             All Projects{" "}
             <svg
@@ -148,9 +148,9 @@ export default function Work() {
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Featured Project - Takes up more space */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <div className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-4">
@@ -193,89 +193,95 @@ export default function Work() {
               </div>
 
               {/* Project Image/Preview */}
-              <div className="h-50 md:h-150 bg-gray-100 relative overflow-hidden">
-                <div>
-                  <Image
-                    src={projects[0].image}
-                    alt={`${projects[0].title} preview`}
-                    fill
-                    className="rounded-lg object-cover object-top shadow"
-                    sizes="100vw"
-                  />
-                </div>
-              </div>
+              <a
+                href={projects[0].websiteLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-50 md:h-150 bg-gray-100 relative overflow-hidden block cursor-pointer hover:opacity-90 transition-opacity"
+              >
+                <Image
+                  src={projects[0].image}
+                  alt={`${projects[0].title} preview`}
+                  fill
+                  className="rounded-lg object-cover object-top shadow"
+                  sizes="100vw"
+                />
+              </a>
             </div>
           </div>
 
-          {/* Regular Projects */}
-          <div className="md:col-span-2 lg:col-span-3 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.slice(1).map((project) => (
-              <div
-                key={project.id}
-                className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-              >
-                <div className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-lg">
-                      {project.icon}
-                    </div>
-                    <span className="text-sm text-gray-600">
-                      {project.company}
-                    </span>
+          {/* Regular Projects - Now 2 columns instead of 3 */}
+          {projects.slice(1).map((project) => (
+            <div
+              key={project.id}
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+            >
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-lg">
+                    {project.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-gray-600 mb-6">{project.description}</p>
-                  <button
-                    onClick={() => toggleProject(project.id)}
-                    className=" cursor-pointer inline-flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium group/link"
+                  <span className="text-sm text-gray-600">
+                    {project.company}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-6">{project.description}</p>
+                <button
+                  onClick={() => toggleProject(project.id)}
+                  className=" cursor-pointer inline-flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium group/link"
+                >
+                  {expandedProject === project.id ? "... less" : "... more"}
+
+                  <svg
+                    className={`w-4 h-4 transition-transform ${
+                      expandedProject === project.id ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    {expandedProject === project.id ? "... less" : "... more"}
-
-                    <svg
-                      className={`w-4 h-4 transition-transform ${
-                        expandedProject === project.id ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                  {expandedProject === project.id && (
-                    <AnimatedCollapse isOpen={expandedProject === project.id}>
-                      <ProjectDetails project={project} />
-                    </AnimatedCollapse>
-                  )}
-                </div>
-
-                {/* Project Image/Preview - Smaller for regular projects */}
-                <div className="aspect-video bg-gray-100 relative overflow-hidden flex-1 flex items-end">
-                  {project.image ? (
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} preview`}
-                      fill
-                      className=" object-cover object-center object-bottom "
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 590vw, 33vw"
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
                     />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-24 h-16 bg-white rounded-lg shadow-lg mb-2 mx-auto"></div>
-                        <p className="text-xs text-gray-500">Preview</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
+                  </svg>
+                </button>
+                {expandedProject === project.id && (
+                  <AnimatedCollapse isOpen={expandedProject === project.id}>
+                    <ProjectDetails project={project} />
+                  </AnimatedCollapse>
+                )}
               </div>
-            ))}
-          </div>
+
+              {/* Project Image/Preview - Smaller for regular projects */}
+              <a
+                href={project.websiteLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="aspect-video bg-gray-100 relative overflow-hidden flex-1 flex items-end cursor-pointer hover:opacity-90 transition-opacity"
+              >
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    fill
+                    className=" object-cover object-center object-bottom "
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 590vw, 33vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-16 bg-white rounded-lg shadow-lg mb-2 mx-auto"></div>
+                      <p className="text-xs text-gray-500">Preview</p>
+                    </div>
+                  </div>
+                )}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
