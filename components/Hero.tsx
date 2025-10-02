@@ -26,8 +26,8 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start">
               <p className="text-lg md:text-xl text-gray-600 max-w-lg">
-                A very Curious Product Manager with a maker’s mindset and a soft
-                spot for great UX.
+                A Curious Product Manager with a maker’s mindset and a soft spot
+                for great UX.
               </p>
             </div>
             {/* playful chips */}

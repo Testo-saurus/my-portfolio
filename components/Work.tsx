@@ -77,8 +77,8 @@ export default function Work() {
         "Hand-coded the frist version then fine tuned using copilot in vs code.",
       otherInfo:
         "This project taught me a lot about DOM manipulation and event handling. I use this myself almost every day.",
-      githubLink: "https://github.com/yourusername/pomodoro-timer",
-      websiteLink: "https://yourdomain.com/pomodoro-timer",
+      githubLink: "https://github.com/Testo-saurus/POMODORE-LOFI-APP",
+      websiteLink: "https://testo-saurus.github.io/POMODORE-LOFI-APP/",
     },
     {
       id: 4,
@@ -97,7 +97,7 @@ export default function Work() {
       howBuilt:
         "Built as a Chrome extension in JavaScript, with an AI model that inspects page content and context. The extension provides real-time feedback and gentle reminders to help users refocus.",
       otherInfo:
-        "Learned a lot about browser APIs, content scripts, and integrating AI into client-side tools.",
+        "Not published yet. Learned a lot about browser APIs, content scripts, and integrating AI into client-side tools.",
       githubLink: "https://github.com/yourusername/focus-extension",
       websiteLink: "https://yourdomain.com/focus-extension",
     },
