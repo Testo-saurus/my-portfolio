@@ -15,19 +15,21 @@ export default function Work() {
       title: "Nebenkosten Navigator",
       description:
         'German Landlords can via PDF upload create a simple "Nebenkostenabrechnung" for their tenants.',
-      icon: "📦",
+      icon: "🧾",
       image: "/NebenkostenNav_ScreenShot.png",
-      techStack: ["Next.js", "Python", "PDF-lib", "Stripe"],
+      techStack: ["base44"],
       year: 2023,
-      duration: "6 months",
-      aiPercentage: 40,
+      duration: "14 days",
+      aiPercentage: 99,
       whyBuilt:
-        "To simplify the complex process of creating utility cost statements for German landlords.",
+        "To simplify the process of creating utility cost statements for German landlords. Basically replace the Excel Solution.",
       howBuilt:
-        "Built with Next.js frontend, Python backend for PDF processing, and Stripe for payments.",
-      otherInfo: "Processed over 1,000 documents in the first month.",
-      githubLink: "https://github.com/yourusername/nebenkosten",
-      websiteLink: "https://nebenkosten-navigator.com",
+        "Built using Base44, a rapid development platform. Initially explored custom backend solutions for PDF data extraction, testing both Google Document API (did not work) and OpenAI's API with predefined extraction schemas (worked well). While both approaches showed promise, I ultimately leveraged Base44's built-in PDF processing capabilities for optimal reliability and maintainability.",
+      otherInfo:
+        "5 people (friends and family) tested the service and it worked for them. However, launching this as a real product would require more extensive testing to fine-tune edge cases and ensure reliability across different scenarios.",
+
+      githubLink: "https://github.com/Testo-saurus/NebenkostenNav",
+      websiteLink: "https://nebenkosten-navigator-04626349.base44.app",
     },
     {
       id: 2,
@@ -50,10 +52,10 @@ export default function Work() {
       whyBuilt:
         "Inspired by popular territory-expansion games like Paper.io 2, the goal was to build a dynamic and engaging multiplayer experience from scratch. This project also served as a deep dive into real-time web technologies and complex game logic within a modern development platform.",
       howBuilt:
-        "Used the Base44 platform: The iterative development process leveraged AI assistance for initial scaffolding and complex feature implementation (e.g., real-time communication, game state management), allowing rapid prototyping and deployment.",
+        "Developed using the Base44 platform with React and Tailwind CSS for the frontend. Attempted to implement real-time multiplayer functionality using Pusher.js and custom Deno backend functions, but encountered challenges with state synchronization across clients.",
       otherInfo:
         "Never successfully implemented robust real-time multiplayer functionality.  Significant Problems with state synchronization, player authentication, and efficient backend communication using Pusher.js and custom Deno backend functions.", // Emphasize overcoming MP challenges
-      githubLink: "https://github.com/yourusername/nebenkosten", // Please update this to the actual game's repo if available
+      githubLink: "#", // Please update this to the actual game's repo if available
       websiteLink:
         "https://circle-conquest-political-edition-4a71582e.base44.app/",
     },
@@ -68,13 +70,13 @@ export default function Work() {
       techStack: ["HTML", "CSS", "JavaScript"],
       year: 2024,
       duration: "3 week",
-      aiPercentage: 0,
+      aiPercentage: 50,
       whyBuilt:
         "I wanted to learn the basics of web development and create something useful for my own productivity. ",
       howBuilt:
-        "Hand-coded in vanilla JavaScript, with basic HTML and CSS for layout and styling. No frameworks, just learning by doing.",
+        "Hand-coded the frist version then fine tuned using copilot in vs code.",
       otherInfo:
-        "This project taught me a lot about DOM manipulation and event handling.",
+        "This project taught me a lot about DOM manipulation and event handling. I use this myself almost every day.",
       githubLink: "https://github.com/yourusername/pomodoro-timer",
       websiteLink: "https://yourdomain.com/pomodoro-timer",
     },
